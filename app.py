@@ -3,6 +3,7 @@ import pandas as pd
 import random
 import time
 from datetime import datetime
+import pytz
 
 # Configuração da Página
 st.set_page_config(
@@ -213,8 +214,10 @@ elif pagina == "Sorteio":
                 nome_ganhador = ganhador_dados['NOME']
                 cidade_ganhador = ganhador_dados['CIDADE']
                 premio = st.session_state.premio_selecionado
-                hora_sorteio = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
-
+                # Define o fuso horário do Brasil
+                fuso_brasil = pytz.timezone('America/Sao_Paulo')
+                # Pega a hora atual JÁ convertida para o Brasil
+                hora_sorteio = datetime.now(fuso_brasil).strftime('%d/%m/%Y %H:%M:%S')
                 # 2. Animação de Suspense (Roleta)
                 placeholder = st.empty()
                 # 2. Animação de Suspense (Roleta) - Duração Aprox. 5s
@@ -293,3 +296,4 @@ elif pagina == "Sorteio":
         st.table(df_hist) # st.table é mais limpo para listas simples
     else:
         st.info("Nenhum sorteio realizado ainda hoje.")
+
