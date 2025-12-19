@@ -293,7 +293,9 @@ elif pagina == "Sorteio":
     st.subheader("📜 Últimos Ganhadores")
     if st.session_state.historico_sorteios:
         df_hist = pd.DataFrame(st.session_state.historico_sorteios)
+        df_hist.index = df_hist.index + 1
         st.table(df_hist) # st.table é mais limpo para listas simples
     else:
         st.info("Nenhum sorteio realizado ainda hoje.")
+
 
