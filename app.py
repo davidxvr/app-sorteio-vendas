@@ -501,7 +501,7 @@ elif pagina == "Sorteio":
             {img_tag(logo_principal_b64, "150px") if logo_principal_b64 else '<h1 style="color:{COR_AZUL}; margin:0;">🎯</h1>'}
             <div>
                 <h1 style="color:{COR_AZUL}; margin:0; font-size:32px; border:none; padding-bottom:0;">🎯 Realizar Sorteio</h1>
-                <p style="color:#666; margin:8px 0 0 0; font-size:14px;">Sorteie seu ganhador com segurança e transparência</p>
+                <p style="color:#666; margin:8px 0 0 0; font-size:22px;">Sorteie seu ganhador com segurança e transparência</p>
             </div>
         </div>
     </div>
@@ -624,7 +624,7 @@ elif pagina == "Sorteio":
                             border-top:2px solid rgba(255,255,255,0.2);
                         ">
                             <p style="font-size:18px; color:{COR_BRANCO}; margin:12px 0; font-weight:600;">
-                                <span style="color:{COR_DESTAQUE}; font-size:20px;">🎁</span> <b>Prêmio:</b> {premio}
+                                <span style="color:{COR_DESTAQUE}; font-size:28px;">🎁</span> <b>Prêmio:</b> {premio}
                             </p>
                             <p style="font-size:13px; color:rgba(255,255,255,0.75); margin:8px 0;">
                                 🕐 Sorteado em: {hora_sorteio}
