@@ -157,7 +157,3 @@ Todos os direitos reservados © 2026 JR Ferragens e Madeiras
 ## 📞 Suporte
 
 Para dúvidas ou sugestões, entre em contato com a equipe JR Ferragens.
-
----
-
-**Desenvolvido com ❤️ para JR Ferragens e Madeiras**
