@@ -146,7 +146,23 @@ st.markdown(f"""
         border: 1px solid {COR_CINZA_BORDA};
         border-top: 5px solid {COR_VERMELHO};
         border-radius: 12px;
-        padding: 20px !important;
+        padding: 20px !important;        # Inicializar repositório local
+        git init
+        
+        # Adicionar todos os arquivos
+        git add .
+        
+        # Primeiro commit
+        git commit -m "Initial commit: Sistema de Sorteio JR Ferragens"
+        
+        # Renomear branch para main (se necessário)
+        git branch -M main
+        
+        # Adicionar repositório remoto (SUBSTITUA pelo seu)
+        git remote add origin https://github.com/seu-usuario/jr-sorteio.git
+        
+        # Fazer push
+        git push -u origin main
         box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }}
     [data-testid="stMetricLabel"] {{
@@ -501,7 +517,7 @@ elif pagina == "Sorteio":
             {img_tag(logo_principal_b64, "150px") if logo_principal_b64 else '<h1 style="color:{COR_AZUL}; margin:0;">🎯</h1>'}
             <div>
                 <h1 style="color:{COR_AZUL}; margin:0; font-size:32px; border:none; padding-bottom:0;">🎯 Realizar Sorteio</h1>
-                <p style="color:#666; margin:8px 0 0 0; font-size:22px;">Sorteie seu ganhador com segurança e transparência</p>
+                <p style="color:#666; margin:8px 0 0 0; font-size:14px;">Sorteie seu ganhador com segurança e transparência</p>
             </div>
         </div>
     </div>
@@ -604,10 +620,10 @@ elif pagina == "Sorteio":
                     ">
                         {logo_card}
                         <p style="
-                            color:rgba(255,255,255,0.8);
+                            color:rgba(255,255,255,0.9) !important;
                             text-transform:uppercase;
                             letter-spacing:4px;
-                            font-size:13px;
+                            font-size:18px;
                             margin:0 0 8px 0;
                             font-weight:700;
                         ">🏆 GANHADOR CONFIRMADO 🏆</p>
@@ -615,7 +631,7 @@ elif pagina == "Sorteio":
                             color:#FFFFFF !important;
                             font-size:48px; font-weight:800;
                             margin:16px 0; line-height:1.1;
-                            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                            text-shadow: 0 3px 8px rgba(0,0,0,0.4);
                         ">{nome_ganhador}</div>
                         <div style="color:rgba(255,255,255,0.95); margin-bottom:8px; font-size:18px;">
                             📍 {cidade_ganhador}</div>
@@ -623,8 +639,8 @@ elif pagina == "Sorteio":
                             margin-top:24px; padding-top:24px;
                             border-top:2px solid rgba(255,255,255,0.2);
                         ">
-                            <p style="font-size:18px; color:{COR_BRANCO}; margin:12px 0; font-weight:600;">
-                                <span style="color:{COR_DESTAQUE}; font-size:28px;">🎁</span> <b>Prêmio:</b> {premio}
+                            <p style="font-size:22px; color:#FFFFFF !important; margin:12px 0; font-weight:600;">
+                                <span style="color:{COR_DESTAQUE}; font-size:24px;">🎁</span> <b>Prêmio:</b> {premio}
                             </p>
                             <p style="font-size:13px; color:rgba(255,255,255,0.75); margin:8px 0;">
                                 🕐 Sorteado em: {hora_sorteio}
